@@ -29,3 +29,16 @@ const getRandomQuote = array => {
 // create the printQuote function. 
 // This is the meat of the app. It uses the random function to pick a quote object.
 // It will then modify the inner HTML of the page to display the quote.
+function printQuote () {
+    const randomQuote = getRandomQuote(quotes);
+    let chosenQuote = randomQuote.quote + ' ' + randomQuote.source;
+    if (randomQuote.citation) {
+        chosenQuote += ' ' + randomQuote.citation;
+    };
+    if (randomQuote.year) {
+        chosenQuote += ' ' + randomQuote.year;
+    };
+    console.log(chosenQuote);
+};
+
+printQuote();
