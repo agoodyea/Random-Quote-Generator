@@ -31,7 +31,8 @@ const getRandomQuote = array => {
 // It will then modify the inner HTML of the page to display the quote.
 function printQuote () {
     const randomQuote = getRandomQuote(quotes);
-    let chosenQuote = randomQuote.quote + ' ' + randomQuote.source;
+    let chosenQuote = "<p class='quote'>" + randomQuote.quote + "</p>";
+    chosenQuote += "<p class='sources'>" + randomQuote.source + "</p>";
     if (randomQuote.citation) {
         chosenQuote += ' ' + randomQuote.citation;
     };
