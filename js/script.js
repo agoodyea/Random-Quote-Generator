@@ -26,9 +26,9 @@ function getRandomColor (colorsArray) {
     return colorsArray[randomNum];
 };
 
-// function changeTimer() {
-//     timer = window.setTimeout(getRandomQuote, 1000);
-//   };
+function changeTimer() {
+    timer = window.setInterval(printQuote, 20000);
+  };
 
 // add the objects with quote, source, citation, and year properties
 
