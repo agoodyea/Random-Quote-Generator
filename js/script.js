@@ -1,4 +1,4 @@
-let quotes = [
+const quotes = [
     
     {quote: 'The present is theirs; the future, for which I really work, is mine.',
      source: 'Nikola Tesla'},
@@ -17,13 +17,26 @@ let quotes = [
 
     ]; 
 
+const colors = ['#0066cc', '#cc2900', '#36b55c'];
+
+var timer;
+
+function getRandomColor (colorsArray) {
+    let randomNum = Math.floor(Math.random() * colorsArray.length );
+    return colorsArray[randomNum];
+};
+
+// function changeTimer() {
+//     timer = window.setTimeout(getRandomQuote, 1000);
+//   };
+
 // add the objects with quote, source, citation, and year properties
 
 // create the random number function
 // since there are five quote objects, the function needs to return a number between 0 - 4.
 const getRandomQuote = array => { 
-    let randomNum = Math.floor(Math.random() * array.length ) 
-    return array[randomNum]
+    let randomNum = Math.floor(Math.random() * array.length );
+    return array[randomNum];
     };
 
 // create the printQuote function. 
@@ -43,8 +56,6 @@ function printQuote () {
         chosenQuote += "<span class='year'>" + randomQuote.year + "</span>";
         chosenQuote += "</p>"
     };
-    console.log(chosenQuote);
+    document.body.style.background = getRandomColor(colors);
     document.getElementById('quote-box').innerHTML = chosenQuote;
 };
-
-printQuote();
