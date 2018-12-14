@@ -32,7 +32,7 @@ const getRandomQuote = array => {
 function printQuote () {
     const randomQuote = getRandomQuote(quotes);
     let chosenQuote = "<p class='quote'>" + randomQuote.quote + "</p>";
-    chosenQuote += "<p class='sources'>" + randomQuote.source + "</p>";
+    chosenQuote += "<p class='source'>" + randomQuote.source + "</p>";
     if (randomQuote.citation) {
         chosenQuote = chosenQuote.slice(0, -4);
         chosenQuote += "<span class='citation'>" + randomQuote.citation + "</span>";
@@ -44,6 +44,7 @@ function printQuote () {
         chosenQuote += "</p>"
     };
     console.log(chosenQuote);
+    document.getElementById('quote-box').innerHTML = chosenQuote;
 };
 
 printQuote();
