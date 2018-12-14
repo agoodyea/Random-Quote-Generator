@@ -34,10 +34,14 @@ function printQuote () {
     let chosenQuote = "<p class='quote'>" + randomQuote.quote + "</p>";
     chosenQuote += "<p class='sources'>" + randomQuote.source + "</p>";
     if (randomQuote.citation) {
-        chosenQuote += ' ' + randomQuote.citation;
+        chosenQuote = chosenQuote.slice(0, -4);
+        chosenQuote += "<span class='citation'>" + randomQuote.citation + "</span>";
+        chosenQuote += "</p>"
     };
     if (randomQuote.year) {
-        chosenQuote += ' ' + randomQuote.year;
+        chosenQuote = chosenQuote.slice(0, -4);
+        chosenQuote += "<span class='year'>" + randomQuote.year + "</span>";
+        chosenQuote += "</p>"
     };
     console.log(chosenQuote);
 };
