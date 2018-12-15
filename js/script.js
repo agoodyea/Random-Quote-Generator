@@ -78,3 +78,8 @@ function printQuote () {
     document.body.style.background = getRandomColor(colors);
     document.getElementById('quote-box').innerHTML = chosenQuote;
 };
+
+// Future additional features
+// - make it so no quote is shown more than once before all quotes are shown.
+// - make is so no background color is shown twice in a row.
+// - add fade transition between quotes.
