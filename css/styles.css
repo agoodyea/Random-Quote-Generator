@@ -68,6 +68,10 @@ body {
   font-style: normal;
 }
 
+.category {
+  font-size: 70%;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
